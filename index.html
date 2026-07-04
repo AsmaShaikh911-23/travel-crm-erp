@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard — Travel CRM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page">
+    <h1>Dashboard</h1>
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <span class="kpi-label">Total Leads</span>
+        <span class="kpi-value" id="kpiTotalLeads">-</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Hot Leads</span>
+        <span class="kpi-value" id="kpiHotLeads">-</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Conversion Rate</span>
+        <span class="kpi-value" id="kpiConversion">-</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Revenue</span>
+        <span class="kpi-value" id="kpiRevenue">-</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Profit</span>
+        <span class="kpi-value" id="kpiProfit">-</span>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

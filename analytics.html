@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Analytics — Travel CRM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page">
+    <h1>Analytics</h1>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <span class="kpi-label">Total Leads</span>
+        <span class="kpi-value" id="aTotalLeads">-</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Conversion Rate</span>
+        <span class="kpi-value" id="aConversion">-</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Pipeline Value</span>
+        <span class="kpi-value" id="aPipelineValue">-</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Revenue</span>
+        <span class="kpi-value" id="aRevenue">-</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Profit</span>
+        <span class="kpi-value" id="aProfit">-</span>
+      </div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="chart-card">
+        <h3>Funnel — Leads by Stage</h3>
+        <canvas id="funnelChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>Source-wise Leads</h3>
+        <canvas id="sourceChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>Destination Popularity</h3>
+        <canvas id="destinationChart"></canvas>
+      </div>
+      <div class="chart-card">
+        <h3>Revenue vs Expense</h3>
+        <canvas id="revenueChart"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+</html>

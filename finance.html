@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Finance — Travel CRM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page">
+    <h1>Finance</h1>
+
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <span class="kpi-label">Revenue</span>
+        <span class="kpi-value" id="finRevenue">-</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Expenses</span>
+        <span class="kpi-value" id="finExpense">-</span>
+      </div>
+      <div class="kpi-card">
+        <span class="kpi-label">Profit</span>
+        <span class="kpi-value" id="finProfit">-</span>
+      </div>
+    </div>
+
+    <form id="financeForm" class="inline-form">
+      <input type="text" id="f_description" placeholder="Description" required>
+      <input type="number" id="f_amount" placeholder="Amount (₹)" required>
+      <select id="f_type" required>
+        <option value="">Type</option>
+        <option value="revenue">Revenue</option>
+        <option value="expense">Expense</option>
+      </select>
+      <select id="f_lead"></select>
+      <button type="submit">Add Entry</button>
+    </form>
+
+    <table class="data-table">
+      <thead>
+        <tr><th>Description</th><th>Amount</th><th>Type</th><th>Linked Lead</th></tr>
+      </thead>
+      <tbody id="financeTableBody"></tbody>
+    </table>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/finance.js"></script>
+</body>
+</html>

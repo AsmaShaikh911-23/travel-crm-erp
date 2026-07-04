@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Leads — Travel CRM</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="nav-placeholder"></div>
+
+  <main class="page">
+    <h1>Leads</h1>
+
+    <form id="leadForm" class="inline-form">
+      <input type="text" id="l_name" placeholder="Name" required>
+      <input type="text" id="l_phone" placeholder="Phone" required>
+      <input type="email" id="l_email" placeholder="Email">
+      <input type="text" id="l_destination" placeholder="Destination" required>
+      <input type="number" id="l_budget" placeholder="Budget (₹)" required>
+      <select id="l_source" required>
+        <option value="">Source</option>
+        <option value="Website">Website</option>
+        <option value="Instagram">Instagram</option>
+        <option value="Facebook">Facebook</option>
+        <option value="Google Maps">Google Maps</option>
+      </select>
+      <button type="submit">Add Lead</button>
+    </form>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Name</th><th>Phone</th><th>Destination</th><th>Budget</th>
+          <th>Source</th><th>Status</th><th>Score</th>
+        </tr>
+      </thead>
+      <tbody id="leadsTableBody"></tbody>
+    </table>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabaseClient.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/leads.js"></script>
+</body>
+</html>
