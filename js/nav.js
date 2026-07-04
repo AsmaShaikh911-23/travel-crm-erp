@@ -8,6 +8,7 @@ function renderNav() {
     { href: "pipeline.html", label: "Pipeline" },
     { href: "messages.html", label: "Messages" },
     { href: "proposals.html", label: "Proposals" },
+    { href: "bookings.html", label: "Bookings" },
     { href: "vendors.html", label: "Vendors" },
     { href: "finance.html", label: "Finance" },
     { href: "staff.html", label: "Staff" },
