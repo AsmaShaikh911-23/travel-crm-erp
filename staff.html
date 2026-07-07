@@ -20,12 +20,29 @@
       <button type="submit">Add Staff</button>
     </form>
 
-    <table class="data-table">
-      <thead>
-        <tr><th>Name</th><th>Assigned Leads</th><th>Conversions</th><th>Commission</th><th>Performance</th></tr>
-      </thead>
-      <tbody id="staffTableBody"></tbody>
-    </table>
+    <form id="reassignForm" class="inline-form">
+      <div style="display:flex;flex-direction:column;min-width:220px;">
+        <label for="reassignLead" style="font-weight:600;margin-bottom:6px;">Select Lead (Client)</label>
+        <select id="reassignLead" required></select>
+      </div>
+      <div style="display:flex;flex-direction:column;min-width:220px;">
+        <label for="reassignStaff" style="font-weight:600;margin-bottom:6px;">Assign To (Staff)</label>
+        <select id="reassignStaff" required></select>
+      </div>
+      <button type="submit">Reassign Lead</button>
+    </form>
+
+    <div class="inline-form" style="align-items:flex-start;">
+      <div style="display:flex;flex-direction:column;min-width:220px;">
+        <label for="staffPicker" style="font-weight:600;margin-bottom:6px;">Select Staff</label>
+        <select id="staffPicker" style="min-width:220px;"></select>
+      </div>
+      <div id="staffDetailPanel" class="card-panel" style="flex:1;min-width:420px;">Select a staff member to view details</div>
+    </div>
+
+    <div id="staffDirectory" class="staff-directory"></div>
+
+    <div id="leadProfilePanel" class="card-panel"></div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

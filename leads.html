@@ -28,6 +28,38 @@
       <button type="submit">Add Lead</button>
     </form>
 
+    <div class="inline-form">
+      <select id="scrapeSource">
+        <option value="all">All Sources</option>
+        <option value="instagram">Instagram</option>
+        <option value="facebook">Facebook</option>
+        <option value="website">Website</option>
+      </select>
+      <button type="button" id="scrapeLeadsBtn">Scrape Leads</button>
+    </div>
+
+    <div class="card-panel">
+      <h3>Latest Scrape Status</h3>
+      <p id="scrapeStatus">Loading…</p>
+    </div>
+    <div id="toast" class="toast" aria-live="polite" role="status"></div>
+
+    <div class="card-panel">
+      <h3>Scrape History</h3>
+      <div style="display:flex;gap:10px;align-items:center;margin-bottom:10px;">
+        <button id="refreshScrapeHistory" class="secondary-btn">Refresh History</button>
+        <small class="muted">Shows recent scrape attempts recorded in <em>scrape_logs</em>.</small>
+      </div>
+      <table class="data-table">
+        <thead>
+          <tr><th>Time</th><th>Source</th><th>Status</th><th>Notes</th></tr>
+        </thead>
+        <tbody id="scrapeHistoryBody">
+          <tr><td colspan="4" class="muted">Loading history…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <table class="data-table">
       <thead>
         <tr>

@@ -1,4 +1,4 @@
-// vendors.js — MODULE 8A: Vendor Management
+// vendors.js — Vendor Management
 
 async function loadVendors() {
   const { data, error } = await supabaseClient.from("vendors").select("*").order("id", { ascending: true });
